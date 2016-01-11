@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rings Config</title>
+  <link rel="stylesheet" href="config/css/slate.min.css">
+  <link rel="stylesheet" href="config/css/stylesheet.css">
+</head>
+<body>
+  <div class="item-container">
+    <h1 class="title">Rings Configuration</h1>
+  </div>
+
+  <div class="item-container">
+    <div class="item-container-header">Color Options</div>
+    <div class="item-container-content">
+      <label class="item">
+        Random Color
+        <input id="randomColorCheckbox" type="checkbox" class="item-toggle" checked>
+      </label>
+      <div class="item-container-footer">If random is checked, color selections are ignored, and color is updated 			randomly every hour</div>
+      <label class="item">
+        Background Color
+        <input id="backgroundColorPicker" type="text" class="item-color item-color-normal" value="#0000AA">
+      </label>
+      <label class="item">
+        Foreground Color
+        <input id="foregroundColorPicker" type="text" class="item-color item-color-normal" value="#FFFFFF">
+      </label>
+    </div>
+  </div>
+
+  <div class="item-container">
+    <div class="item-container-header">Center Line</div>
+    <div class="item-container-content">
+      <label class="item">
+        Center Line Shows Battery Level
+        <input id="batteryLineCheckbox" type="radio" class="item-radio" name="radio-1" checked>
+      </label>
+      <label class="item">
+        Center Line Has Static Length
+        <input id="staticLineCheckbox" type="radio" class="item-radio" name="radio-1">
+      </label>
+      <label class="item">
+        No Center Line
+        <input id="noLineCheckbox" type="radio" class="item-radio" name="radio-1">
+      </label>
+    </div>
+  </div>     
+
+  <div class="item-container">
+    <div class="item-container-header">Date</div>
+    <div class="item-container-content">
+      <label class="item">
+        Show Date
+        <input id="showDateCheckbox" type="checkbox" class="item-toggle" checked>
+      </label>
+    </div>
+  </div>   
+
+  <div class="item-container">
+    <div class="item-container-header">Bluetooth</div>
+    <div class="item-container-content">
+      <label class="item">
+        Vibrate on Bluetooth Disconnect
+        <input id="bluetoothVibesCheckbox" type="checkbox" class="item-toggle" checked>
+      </label>
+    </div>
+  </div>   
+
+  <div class="item-container">
+    <div class="button-container">
+      <input id="submitButton" type="button" class="item-button" value="SUBMIT">
+    </div>
+  </div>
+
+
+  <script type="text/javascript" src="config/js/slate.min.js"></script>
+  <script type="text/javascript" src="config/js/main.js"></script>
+</body>
+</html>
