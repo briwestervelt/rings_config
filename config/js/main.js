@@ -51,8 +51,8 @@ function getAndStoreConfigureData(){
     batteryLine: $batteryLineCheckbox[0].checked,
     staticLine: $staticLineCheckbox[0].checked,
     noLine: $noLineCheckbox[0].checked,
-    showDate: #showDateCheckbox[0].checked,
-    bluetoothVibes: #bluetoothVibesCheckbox[0].checked
+    showDate: $showDateCheckbox[0].checked,
+    bluetoothVibes: $bluetoothVibesCheckbox[0].checked
   }
 
   localStorage.randomColor = options.randomColor;
