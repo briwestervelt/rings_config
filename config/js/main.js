@@ -42,7 +42,7 @@ function getAndStoreConfigureData(){
   localStorage.batteryLine = options.batteryLine;
   localStorage.staticLine = options.staticLine;
   localStorage.noLine = options.noLine;
-  localStorage.showDate = options.showdate;
+  localStorage.showDate = options.showDate;
   localStorage.bluetoothVibes = options.bluetoothVibes
 
 
