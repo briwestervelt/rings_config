@@ -12,7 +12,6 @@ function submitHandler(){
 
 function loadOptions() {
   
-  var $randomColorCheckbox = $("#randomColorCheckbox");
   var $backgroundColorPicker = $("#backgroundColorPicker");
   var $foregroundColorPicker = $("#foregroundColorPicker");
   var $batteryLineCheckbox = $("#batteryLineCheckbox");
@@ -22,7 +21,6 @@ function loadOptions() {
   var $bluetoothVibesCheckbox = $("#bluetoothVibesCheckbox");
 
   if (localStorage.backgroundColor) {
-    $randomColorCheckbox[0].checked = localStorage.randomColor === "true";
     $backgroundColorPicker[0].value = localStorage.backgroundColor;
     $foregroundColorPicker[0].value = localStorage.foregroundColor;
     $batteryLineCheckbox[0].checked = localStorage.batteryLine === "true";
@@ -35,7 +33,6 @@ function loadOptions() {
 
 function getAndStoreConfigureData(){
 
-  var $randomColorCheckbox = $("#randomColorCheckbox");
   var $backgroundColorPicker = $("#backgroundColorPicker");
   var $foregroundColorPicker = $("#foregroundColorPicker");
   var $batteryLineCheckbox = $("#batteryLineCheckbox");
@@ -45,7 +42,6 @@ function getAndStoreConfigureData(){
   var $bluetoothVibesCheckbox = $("#bluetoothVibesCheckbox");
 
   var options = {
-    randomColor: $randomColorCheckbox[0].checked,
     backgroundColor: $backgroundColorPicker.val(),
     foregroundColor: $foregroundColorPicker.val(),
     batteryLine: $batteryLineCheckbox[0].checked,
@@ -55,7 +51,6 @@ function getAndStoreConfigureData(){
     bluetoothVibes: $bluetoothVibesCheckbox[0].checked
   }
 
-  localStorage.randomColor = options.randomColor;
   localStorage.backgroundColor = options.backgroundColor;
   localStorage.foregroundColor = options.foregroundColor;
   localStorage.batteryLine = options.batteryLine;
