@@ -11,29 +11,48 @@ function submitHandler(){
 }
 
 function loadOptions() {
+  
+  var $randomColorCheckbox = $("#randomColorCheckbox");
+  var $backgroundColorPicker = $("#backgroundColorPicker");
+  var $foregroundColorPicker = $("#foregroundColorPicker");
+  var $batteryLineCheckbox = $("#batteryLineCheckbox");
+  var $staticLineCheckbox = $("#staticLineCheckbox");
+  var $noLineCheckbox = $("#noLineCheckbox");
+  var $showDateCheckbox = $("#showDateCheckbox");
+  var $bluetoothVibesCheckbox = $("#bluetoothVibesCheckbox");
+
   if (localStorage.backgroundColor) {
-    $("#randomColorCheckbox")[0].checked = localStorage.randomColor === "true";
-    $("#backgroundColorPicker")[0].value = localStorage.backgroundColor;
-    $("#foregroundColorPicker")[0].value = localStorage.foregroundColor;
-    $("#batteryLineCheckbox")[0].checked = localStorage.batteryLine === "true";
-    $("#staticLineCheckbox")[0].checked = localStorage.staticLine === "true";
-    $("#noLineCheckbox")[0].checked = localStorage.noLine === "true";
-    $("#showDateCheckbox")[0].checked = localStorage.showDate === "true";
-    $("#bluetoothVibesCheckbox")[0].checked = localStorage.bluetoothVibes === "true";
+    $randomColorCheckbox[0].checked = localStorage.randomColor === "true";
+    $backgroundColorPicker[0].value = localStorage.backgroundColor;
+    $foregroundColorPicker[0].value = localStorage.foregroundColor;
+    $batteryLineCheckbox[0].checked = localStorage.batteryLine === "true";
+    $staticLineCheckbox[0].checked = localStorage.staticLine === "true";
+    $noLineCheckbox[0].checked = localStorage.noLine === "true";
+    $showDateCheckbox[0].checked = localStorage.showDate === "true";
+    $bluetoothVibesCheckbox[0].checked = localStorage.bluetoothVibes === "true";
   }
 }
 
 function getAndStoreConfigureData(){
 
+  var $randomColorCheckbox = $("#randomColorCheckbox");
+  var $backgroundColorPicker = $("#backgroundColorPicker");
+  var $foregroundColorPicker = $("#foregroundColorPicker");
+  var $batteryLineCheckbox = $("#batteryLineCheckbox");
+  var $staticLineCheckbox = $("#staticLineCheckbox");
+  var $noLineCheckbox = $("#noLineCheckbox");
+  var $showDateCheckbox = $("#showDateCheckbox");
+  var $bluetoothVibesCheckbox = $("#bluetoothVibesCheckbox");
+
   var options = {
-    randomColor: $("#randomColorCheckbox")[0].checked,
-    backgroundColor: $("#backgroundColorPicker").val(),
-    foregroundColor: $("#foregroundColorPicker").val(),
-    batteryLine: $("#batteryLineCheckbox")[0].checked,
-    staticLine: $("#staticLineCheckbox")[0].checked,
-    noLine: $("#noLineCheckbox")[0].checked,
-    showDate: $("#showDateCheckbox")[0].checked,
-    bluetoothVibes: $("#bluetoothVibesCheckbox")[0].checked
+    randomColor: $randomColorCheckbox[0].checked,
+    backgroundColor: $backgroundColorPicker.val(),
+    foregroundColor: $foregroundColorPicker.val(),
+    batteryLine: $batteryLineCheckbox[0].checked,
+    staticLine: $staticLineCheckbox[0].checked,
+    noLine: $noLineCheckbox[0].checked,
+    showDate: #showDateCheckbox[0].checked,
+    bluetoothVibes: #bluetoothVibesCheckbox[0].checked
   }
 
   localStorage.randomColor = options.randomColor;
