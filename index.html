@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Rings Config</title>
+  <title>Theta Config</title>
   <link rel="stylesheet" href="config/css/slate.min.css">
   <link rel="stylesheet" href="config/css/stylesheet.css">
 </head>
 <body>
   <div class="item-container">
-    <h1 class="title">Rings Configuration</h1>
+    <h1 class="title">Theta Configuration</h1>
   </div>
 
   <div class="item-container">
     <div class="item-container-header">Color Options</div>
     <div class="item-container-content">
+      <label class="item">
+        Random Color
+	<input id="randomColorCheckbox" type="checkbox" class="item-toggle" checked>
+      </label>
       <label class="item">
         Background Color
         <input id="backgroundColorPicker" type="text" class="item-color item-color-normal" value="#0000AA">
@@ -21,6 +25,10 @@
         Foreground Color
         <input id="foregroundColorPicker" type="text" class="item-color item-color-normal" value="#FFFFFF">
       </label>
+    </div>
+    <div class="item-container-footer">
+      When Random Color is enabled, the watch face will take on a random color every
+      15 minutes. When Random Color is disabled, the colors chosen here will be used.
     </div>
   </div>
 

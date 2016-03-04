@@ -19,6 +19,7 @@ function loadOptions() {
   var $noLineCheckbox = $("#noLineCheckbox");
   var $showDateCheckbox = $("#showDateCheckbox");
   var $bluetoothVibesCheckbox = $("#bluetoothVibesCheckbox");
+  var $randomColorCheckbox = $("#randomColorCheckbox");
 
   if (localStorage.backgroundColor) {
     $backgroundColorPicker[0].value = localStorage.backgroundColor;
@@ -28,6 +29,7 @@ function loadOptions() {
     $noLineCheckbox[0].checked = localStorage.noLine === "true";
     $showDateCheckbox[0].checked = localStorage.showDate === "true";
     $bluetoothVibesCheckbox[0].checked = localStorage.bluetoothVibes === "true";
+    $randomColorCheckbox[0].checked = localStorage.randomColor == "true";
   }
 }
 
@@ -40,6 +42,7 @@ function getAndStoreConfigureData(){
   var $noLineCheckbox = $("#noLineCheckbox");
   var $showDateCheckbox = $("#showDateCheckbox");
   var $bluetoothVibesCheckbox = $("#bluetoothVibesCheckbox");
+  var $randomColorCheckbox = $("#randomColorCheckbox");
 
   var options = {
     backgroundColor: $backgroundColorPicker.val(),
@@ -48,7 +51,8 @@ function getAndStoreConfigureData(){
     staticLine: $staticLineCheckbox[0].checked,
     noLine: $noLineCheckbox[0].checked,
     showDate: $showDateCheckbox[0].checked,
-    bluetoothVibes: $bluetoothVibesCheckbox[0].checked
+    bluetoothVibes: $bluetoothVibesCheckbox[0].checked,
+    randomColor: $randomColorCheckbox[0].checked
   }
 
   localStorage.backgroundColor = options.backgroundColor;
@@ -57,8 +61,8 @@ function getAndStoreConfigureData(){
   localStorage.staticLine = options.staticLine;
   localStorage.noLine = options.noLine;
   localStorage.showDate = options.showDate;
-  localStorage.bluetoothVibes = options.bluetoothVibes
-
+  localStorage.bluetoothVibes = options.bluetoothVibes;
+  localStorage.randomColor = options.randomColor;
 
   console.log("Got options " + JSON.stringify(options));
   return options;

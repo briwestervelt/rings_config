@@ -1,3 +1,3 @@
-# rings_config
+# theta_config
 
-This is the configuration page for the rings watch face 
+This is the configuration page for the theta watch face (originally named Rings)
